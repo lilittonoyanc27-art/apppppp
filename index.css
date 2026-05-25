@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Noto+Sans+Armenian:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "Noto Sans Armenian", sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-serif: "Playfair Display", Georgia, serif;
+}
+
+/* Custom styles for matching game card flips & visual depth */
+.perspective-800 {
+  perspective: 800px;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #EBEBE8;
+}
+::-webkit-scrollbar-thumb {
+  background: #2B2B2B;
+  border-radius: 0px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #DD0000;
+}
+
+/* Custom Geometric Shadows and Accents */
+.geo-flat-shadow {
+  box-shadow: 4px 4px 0px 0px #1A1A1A;
+}
+
+.geo-flat-shadow-sm {
+  box-shadow: 2px 2px 0px 0px #1A1A1A;
+}
+
+.geo-flat-shadow-yellow {
+  box-shadow: 4px 4px 0px 0px #FFCE00;
+}
+
+.geo-flat-shadow-red {
+  box-shadow: 4px 4px 0px 0px #DD0000;
+}
+
+/* Background image overlay to blend German landscape options geometrically */
+.geo-wallpaper-frame {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.geo-wallpaper-frame::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(244, 244, 242, 0.92);
+  backdrop-filter: saturate(1.1) contrast(1.05);
+  pointer-events: none;
+  z-index: 1;
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Armenian to Spanish Game Trainer",
+  "description": "Interactive language learning games covering days of the week, numbers, and word genders from Armenian to Spanish.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
